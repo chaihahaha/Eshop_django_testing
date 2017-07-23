@@ -24,7 +24,7 @@ SECRET_KEY = '=f3z!k^(jf6*gs-c9(4&ydy7o*g$4vv*avn$419b(4vq@kp8_n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-TEMPLATE_DEBUG=DEBUG
+TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = ['*']
 
@@ -88,7 +88,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'#zh-hans
+LANGUAGE_CODE = 'en-us'  # zh-hans
 
 TIME_ZONE = 'UTC'
 
@@ -97,11 +97,11 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-MEDIA_ROOT='./media'
-MEDIA_URL='/media/'
+MEDIA_ROOT = './media'
+MEDIA_URL = '/media/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
-STATIC_ROOT='./static'
+STATIC_ROOT = './static'
 STATIC_URL = '/static/'
-STATIC_PATH="./media"
+STATIC_PATH = "./media"
