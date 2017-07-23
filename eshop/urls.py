@@ -15,8 +15,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.static import serve
+from order.views import index
 admin.autodiscover()
 urlpatterns = [
+    url(r'^$', index),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^media/(?P<path>.*)$',
         serve, {"document_root": "./media",

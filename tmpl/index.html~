@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% autoescape on %}
+{% block content %}
+{% include "nav.html"%}
+hi,welcome!!!
+<br/>
+<table id="result_list" align="center">
+  <thead>
+    <tr>
+
+      <th scope="col"  class="action-checkbox-column">
+        <div class="text"><span>name</span></div>
+      </th>
+      <th scope="col"  class="action-checkbox-column">
+        <div class="text"><span>price</span></div>
+      </th>
+      <th scope="col"  class="action-checkbox-column">
+        <div class="text"><span>type</span></div>
+      </th>
+      <th scope="col"  class="action-checkbox-column">
+        <div class="text"><span>image</span></div>
+      </th>
+
+      <th scope="col"  class="column-__str__">
+
+        <div class="text"><span>Product</span></div>
+        <div class="clear"></div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {%for obj in products%}
+    <tr class="rowl">
+      <th><a href="5/">{{obj.name}} </a></th>
+      <th>{{obj.price}} </a></th>
+      <th>{{obj.ptype}} </a></th>
+      <th><img src="/media/{{obj.img}}" height="100" width="100"/> </a></th>
+    </tr>
+    {%endfor%}
+
+  </tbody>
+  </table>
+
+{% endblock %}
+{% endautoescape %}
