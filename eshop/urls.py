@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$',
         serve, {"document_root": "./media", }),
     url(r'^showoff/', include('showoff.urls')),
-
+    url(r'^accounts/', include('users.urls'))
 ]

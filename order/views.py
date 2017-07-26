@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response
-from django.http import HttpResponse
-from order.models import Product, Ptype, Order, UserProfile
+# from django.http import HttpResponse
+from order.models import Product
 
 # Create your views here.
 

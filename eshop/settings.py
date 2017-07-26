@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'order',
     'showoff',
+    'users',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -105,3 +106,7 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = './static'
 STATIC_URL = '/static/'
 STATIC_PATH = "./media"
+AUTH_USER_MODEL = 'users.User'
+USERS_VERIFY_EMAIL = False
+USERS_SPAM_PROTECTION = False
+LOGIN_REDIRECT_URL = '/admin/'
