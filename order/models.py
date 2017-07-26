@@ -15,6 +15,7 @@ class Product(models.Model):
     price = models.FloatField('price', default=10)
     ptype = models.ForeignKey(Ptype)
     img = models.ImageField('img', upload_to="product", max_length=100)
+    music = models.FileField('music', upload_to="product", max_length=100)
 
     def __str__(self):
         return "名称:%s 价格:%f " % (self.name, self.price)
