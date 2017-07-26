@@ -21,7 +21,7 @@ urlpatterns = [
     url(r'^$', index),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^media/(?P<path>.*)$',
-        serve, {"document_root": "./media",
-                }),
+        serve, {"document_root": "./media", }),
+    url(r'^showoff/', include('showoff.urls')),
 
 ]

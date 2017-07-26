@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'order',
+    'showoff',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -90,7 +91,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'  # zh-hans
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Harbin'
 
 USE_I18N = True
 
