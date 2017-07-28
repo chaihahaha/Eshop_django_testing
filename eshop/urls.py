@@ -15,7 +15,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.static import serve
-from order.views import index
+from order.views import index  # from order.views import index
 admin.autodiscover()
 urlpatterns = [
     url(r'^$', index),
@@ -23,5 +23,9 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$',
         serve, {"document_root": "./media", }),
     url(r'^showoff/', include('showoff.urls')),
-    url(r'^accounts/', include('users.urls'))
+    url(r'^accounts/', include('users.urls')),
+    #    url(r'^author-polls/', include('showoff.urls',
+    # namespace='author-polls')),
+    #    url(r'^publisher-polls/',
+    #        include('showoff.urls', namespace='publisher-polls')),
 ]

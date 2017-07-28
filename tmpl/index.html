@@ -8,24 +8,27 @@
   <thead>
     <tr>
 
-      <th scope="col"  class="action-checkbox-column">
+      <th scope="col"  class="action-checkbox-column" width="10">
         <div class="text"><span>name</span></div>
       </th>
-      <th scope="col"  class="action-checkbox-column">
+      <th scope="col"  class="action-checkbox-column" width="10">
         <div class="text"><span>price</span></div>
       </th>
-      <th scope="col"  class="action-checkbox-column">
+      <th scope="col"  class="action-checkbox-column" width="10">
         <div class="text"><span>type</span></div>
       </th>
-      <th scope="col"  class="action-checkbox-column">
+      <th scope="col"  class="action-checkbox-column" width="30">
         <div class="text"><span>image</span></div>
       </th>
-      <th scope="col"  class="column-__str__">
+      <th scope="col"  class="column-__str__" width="50">
         <div class="text"><span>music</span></div>
       </th>
-      <th scope="col"  class="column-__str__">
+      <th scope="col"  class="column-__str__" width="100">
         <div class="text"><span>article</span></div>
-      </th>       
+      </th>
+      <th scope="col"  class="column-__str__" width="300">
+        <div class="text"><span>video</span></div>
+      </th> 
     </tr>
   </thead>
   <tbody>
@@ -36,8 +39,37 @@
       <th>{{obj.price}} </a></th>
       <th>{{obj.ptype}} </a></th>
       <th><img src="/media/{{obj.img}}" height="100" width="100"/> </a></th>
-      <th><audio src="/media/{{obj.music}}" controls="controls" ></th>
-      <th height="500px" width="1500px"><textarea rows="20" cols="100">{{obj.texts}}</textarea></th>
+      <th><audio src="/media/{{obj.music}}" controls="controls" ></th></th>
+<th><textarea rows="20" cols="50">{{obj.texts}}</textarea></th>
+<th><video controls="controls" src="/media/{{obj.video}}">
+
+<script>
+  var videoElement = document.getElementById("myvideo");
+    
+  function toggleFullScreen() {
+    if (!document.mozFullScreen && !document.webkitFullScreen) {
+      if (videoElement.mozRequestFullScreen) {
+        videoElement.mozRequestFullScreen();
+      } else {
+        videoElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+      }
+    } else {
+      if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else {
+        document.webkitCancelFullScreen();
+      }
+    }
+  }
+  
+  document.addEventListener("keydown", function(e) {
+    if (e.keyCode == 13) {
+      toggleFullScreen();
+    }
+  }, false);
+</script>
+</video></th>
+
     </tr>
     {%endfor%}
 

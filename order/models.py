@@ -16,6 +16,7 @@ class Product(models.Model):
     texts = models.TextField('article', max_length=5000)
     img = models.ImageField('img', upload_to="product", max_length=100)
     music = models.FileField('music', upload_to="product", max_length=100)
+    video = models.FileField('video', upload_to="product", max_length=100)
 
     def __str__(self):
         return "名称:%s 价格:%f " % (self.name, self.price)
